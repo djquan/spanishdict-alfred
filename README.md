@@ -17,3 +17,11 @@ Note: There's a slight unexpected behavior where it will return english verbs, a
 ## caching
 
 Both scripts implement a pretty dumb cache that expires after a week.
+
+`sd WORD OR SENTENCE` opens a suggestion window where the action is opening to spanishdict.com with that word or phrase.
+
+![img](images/sd.png)
+
+`sd word` opens a suggestion window for verbs where the action is to open to the conjugation table on spanishdict.com
+
+![img](images/sdc.png)
