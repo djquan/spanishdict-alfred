@@ -36,13 +36,15 @@ def get_suggestions(word)
 end
 
 def main(action)
-  results = get_suggestions(ARGV[0])
+  unencoded = ARGV[0]
+  word = CGI.escape(unencoded)
+  results = get_suggestions(word)
   case action
   when :translation_suggestion
-    unless results[:items].any? { |item| item[:title] == ARGV[0] }
+    unless results[:items].any? { |item| item[:title].unicode_normalize == unencoded.unicode_normalize }
       results[:items] << {
-        title: ARGV[0],
-        arg: ARGV[0],
+        title: unencoded,
+        arg: unencoded,
       }
     end
   when :conjugation_suggestion
