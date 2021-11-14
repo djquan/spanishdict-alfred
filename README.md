@@ -24,6 +24,6 @@ This workflow implement a pretty dumb cache that expires after a week.
 
 ![img](images/sd.png)
 
-`sd word` opens a suggestion window for verbs where the action is to open to the conjugation table on spanishdict.com
+`sdc word` opens a suggestion window for verbs where the action is to open to the conjugation table on spanishdict.com
 
 ![img](images/sdc.png)
